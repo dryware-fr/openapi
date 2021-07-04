@@ -1,0 +1,61 @@
+:revealjs_theme: beige
+:source-highlighter: highlightjs
+:highlightjs-theme: https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/styles/stackoverflow-dark.min.css
+:highlightjsdir: https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/
+
+= Title Slide
+
+== Code slide
+
+[source,java]
+----
+package com.totalenergies.wsor.repository;
+
+import com.totalenergies.wsor.repository.entity.WellItemEntity;
+import com.totalenergies.wsor.repository.entity.WellItemId;
+import com.totalenergies.wsor.repository.entity.WellItemSpecEntity;
+import com.totalenergies.wsor.repository.entity.WellSpaceEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface WellItemRepository extends JpaRepository<WellItemEntity, WellItemId> {
+  List<WellItemEntity> findBySpec(WellItemSpecEntity spec);
+
+  Optional<WellItemEntity> findFirstByWellAndSpecOrderByWellVersionDesc(WellSpaceEntity well, WellItemSpecEntity spec);
+
+  Optional<WellItemEntity> findFirstBySpecAndValueOrderByWellVersionDesc(WellItemSpecEntity spec, String value);
+}
+----
+
+== Slide Toto
+
+* Foo
+* Bar
+* World
+
+== Slide Tata
+
+* Foo
+* Bar
+* World
+
+=== Slide Tata.2
+
+* Foo
+* Bar
+* World
+
+=== Slide Tata.3
+
+* Foo
+* Bar
+* World
+
+== Slide Titi
+
+* Foo
+* Bar
+* World
+
