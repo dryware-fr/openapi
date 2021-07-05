@@ -1,13 +1,39 @@
 == OpenAPI usage
 
-* given an OpenAPI specification
-* when typescript-angular generator produces client API code (npm package)
-* then the client API module should normally be published through npm install && npm build && npm publish
+=== OpenAPI usage
 
-Integration documented in Confluence
+* Write one OpenAPI specification
+* OpenAPI generator produces modules for eased API integration
+* Many supported languages & frameworks (frontend/backend)
+* Ready to be sent to TDF's APIM team
 
 [.notes]
 --
 Feel free to ask for the direct link
 https://tdf.atlassian.net/wiki/spaces/TDF/pages/1451524628/Digital+Well+SOR+OpenApi
 --
+
+=== OpenAPI usage
+
+Example
+
+* Frontend generation for Angular 12
+* Corresponding module : typescript-angular
+* Produces an npm module
+
+[.notes]
+--
+OpenAPI generators list
+https://openapi-generator.tech/docs/generators/
+--
+
+=== OpenAPI usage
+
+Generated module can be built and published by using usual commands :
+
+[source,shell script]
+----
+npm install
+npm build
+npm publish
+----

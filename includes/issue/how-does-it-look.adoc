@@ -1,6 +1,6 @@
 == How does it look ?
 
-=== How does it look ?.1
+=== How does it look ?
 
 Maven output when building the client-api module :
 
@@ -25,7 +25,7 @@ npm ERR! this command with --force, or --legacy-peer-deps
 npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
 ----
 
-=== How does it look ?.2
+=== How does it look ?
 
 In the generated module's package.json :
 
@@ -48,5 +48,8 @@ In the generated module's package.json :
 }
 ----
 
-Angular v12 compiler needs typescript version to be >= 4.1 but the generated package.json forbids it.
-The typescript version constraint comes from tsickle.
+=== How does it look ?
+
+Angular compiler needs typescript version to be >= 4.2.
+
+The generated package.json forbids it through a constraint `"typescript": ">=4.0.0 <4.1.0"`.

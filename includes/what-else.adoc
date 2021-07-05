@@ -1,21 +1,24 @@
 == What else can we do ?
 
-=== What else can we do ?.1
+=== What else can we do ?
 
-Opensource project :
-
-* we have access to the generator code
-* https://github.com/OpenAPITools/openapi-generator
-
-=== What else can we do ?.2
-
-Analyze the generator architecture :
-
-* https://openapi-generator.tech/docs/customization
-
-=== What else can we do ?.2
+Read the documentation on customization
 
 Two ways to customize a generator :
 
 * modify templates
 * and/or modify the generator class
+
+[.notes]
+--
+https://openapi-generator.tech/docs/customization
+--
+
+=== What else can we do ?
+
+The project code is accessible publicly on GitHub
+
+[.notes]
+--
+https://github.com/OpenAPITools/openapi-generator
+--
