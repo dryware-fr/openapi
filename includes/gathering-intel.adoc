@@ -1,0 +1,12 @@
+== Gathering more intel
+
+* One particular generator class : org.openapitools.codegen.languages.TypeScriptAngularClientCodegen
+* A set of templates : src/main/resources/typescript-angular
+* *N.B. :* we browse the exact version tag we're using, eg. v5.1.1.
+* https://github.com/OpenAPITools/openapi-generator/tree/v5.1.1/modules/openapi-generator/src/main
+
+[.notes]
+--
+https://github.com/OpenAPITools/openapi-generator/blob/v5.1.1/modules/openapi-generator/src/main/java/org/openapitools/codegen/languages/TypeScriptAngularClientCodegen.java
+https://github.com/OpenAPITools/openapi-generator/tree/v5.1.1/modules/openapi-generator/src/main/resources/typescript-angular
+--

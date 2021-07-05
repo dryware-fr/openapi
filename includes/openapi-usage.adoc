@@ -1,0 +1,13 @@
+== OpenAPI usage
+
+* given an OpenAPI specification
+* when typescript-angular generator produces client API code (npm package)
+* then the client API module should normally be published through npm install && npm build && npm publish
+
+Integration documented in Confluence
+
+[.notes]
+--
+Feel free to ask for the direct link
+https://tdf.atlassian.net/wiki/spaces/TDF/pages/1451524628/Digital+Well+SOR+OpenApi
+--

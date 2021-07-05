@@ -1,0 +1,60 @@
+== Quick fix
+
+=== Quick fix.1
+
+Manually fix the dependencies tree after code generation by adding intermediate executions :
+
+* removed blocking packages
+* install explicit packages versions
+
+=== Quick fix.2
+
+Many trials and errors later, this is what we needed to add between the code generation
+and module build to make it work :
+
+[source,xml]
+----
+<plugin>
+    <groupId>org.openapitools</groupId>
+    <artifactId>openapi-generator-maven-plugin</artifactId>
+    <version>5.1.1</version>
+    <executions>
+      (...)
+      <execution>
+        <id>npm remove obsolete dependencies</id>
+        <phase>package</phase>
+        <goals>
+          <goal>exec</goal>
+        </goals>
+        <configuration>
+          <executable>npm</executable>
+          <arguments>
+            <argument>uninstall</argument>
+            <argument>tsickle</argument>
+            <argument>typescript</argument>
+            <argument>ng-packagr</argument>
+          </arguments>
+          <workingDirectory>${project.build.directory}/generated-sources/openapi</workingDirectory>
+        </configuration>
+      </execution>
+      <execution>
+        <id>npm reinstall ng-packagr</id>
+        <phase>package</phase>
+        <goals>
+          <goal>exec</goal>
+        </goals>
+        <configuration>
+          <executable>npm</executable>
+          <arguments>
+            <argument>install</argument>
+            <argument>--save-dev</argument>
+            <argument>ng-packagr@${ngVersion}</argument>
+            <argument>typescript@4.2.3</argument>
+          </arguments>
+          <workingDirectory>${project.build.directory}/generated-sources/openapi</workingDirectory>
+        </configuration>
+      </execution>
+      (...)
+    </executions>
+</plugin>
+----

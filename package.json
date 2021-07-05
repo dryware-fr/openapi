@@ -7,7 +7,6 @@
     "build": "asciidoctor-revealjs index.adoc",
     "start": "http-server -d false -o",
     "build:watch": "nodemon -e adoc --ignore node_modules --exec npm run build",
-    "start:watch": "nodemon -e html --ignore node_modules --exec npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

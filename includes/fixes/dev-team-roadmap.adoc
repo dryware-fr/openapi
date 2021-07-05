@@ -1,0 +1,17 @@
+== Project activity
+
+=== Project activity.1
+
+More than 80 opened issues when searching for typescript angular
+
+=== Project activity.2
+
+Refactoring in progress on all typescript generators : https://github.com/OpenAPITools/openapi-generator/issues/802
+* last commit : March 23 2020
+* last comment : July 4 2020
+
+=== Project activity.3
+
+Same issue opened : https://github.com/OpenAPITools/openapi-generator/issues/9511
+* opened on May 18 2021
+* still opened at time of writing

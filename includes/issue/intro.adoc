@@ -1,0 +1,5 @@
+== The issue at hand
+
+* Target is Angular v12
+* OpenAPI typescript-angular supports Angular v11
+* Deprecated npm modules versions in the generated code

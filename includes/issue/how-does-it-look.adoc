@@ -1,0 +1,52 @@
+== How does it look ?
+
+=== How does it look ?.1
+
+Maven output when building the client-api module :
+
+[source]
+----
+[INFO] --- exec-maven-plugin:1.3.2:exec (npm install dependencies) @ client-api ---
+npm ERR! code ERESOLVE
+npm ERR! ERESOLVE unable to resolve dependency tree
+npm ERR!
+npm ERR! While resolving: client-api@1.0.6
+npm ERR! Found: typescript@4.0.8
+npm ERR! node_modules/typescript
+npm ERR!   dev typescript@">=4.0.0 <4.1.0" from the root project
+npm ERR!
+npm ERR! Could not resolve dependency:
+npm ERR! peer typescript@">=4.2.3 <4.4" from @angular/compiler-cli@12.1.1
+npm ERR! node_modules/@angular/compiler-cli
+npm ERR!   dev @angular/compiler-cli@"^12.0.3" from the root project
+npm ERR!
+npm ERR! Fix the upstream dependency conflict, or retry
+npm ERR! this command with --force, or --legacy-peer-deps
+npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
+----
+
+=== How does it look ?.2
+
+In the generated module's package.json :
+
+[source,json]
+----
+{
+  "devDependencies": {
+    "@angular/common": "^12.0.3",
+    "@angular/compiler": "^12.0.3",
+    "@angular/compiler-cli": "^12.0.3",
+    "@angular/core": "^12.0.3",
+    "@angular/platform-browser": "^12.0.3",
+    "ng-packagr": "^11.0.2",
+    "reflect-metadata": "^0.1.3",
+    "rxjs": "^6.6.0",
+    "tsickle": "^0.39.1",
+    "typescript": ">=4.0.0 <4.1.0",
+    "zone.js": "^0.11.3"
+  }
+}
+----
+
+Angular v12 compiler needs typescript version to be >= 4.1 but the generated package.json forbids it.
+The typescript version constraint comes from tsickle.
