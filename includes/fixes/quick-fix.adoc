@@ -12,7 +12,7 @@ Manually fix the dependencies tree after code generation by adding intermediate 
 Many trials and errors later, we determined the dependencies blocking typescript
 version upgrade, the final build process looks like :
 
-[source,shell script]
+[source,highlight=2..3]
 ----
 npm install
 npm uninstall tsickle typescript ng-packagr

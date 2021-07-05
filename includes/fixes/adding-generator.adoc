@@ -1,0 +1,71 @@
+== Adding a generator
+=== Adding a generator
+By making a pull request
+
+* Needs dev team validation
+* Delayed release
+* We need it now
+
+=== Adding a generator
+By adding it in the class path
+
+[source,xml,highlight=11..16]
+----
+<plugin>
+<groupId>org.openapitools</groupId>
+<artifactId>openapi-generator-maven-plugin</artifactId>
+<version>5.1.1</version>
+<executions>
+  <execution>
+    <id>generate client</id>
+    <goals>
+      <goal>generate</goal>
+    </goals>
+    <configuration>
+      <inputSpec>${apiFilePath}</inputSpec>
+      <generatorName>com.totalenergies.codegen.TDFTypeScriptAngularClientCodegen</generatorName>
+      <additionalProperties>ngVersion=${ngVersion},npmName=${project.artifactId},npmVersion=${project.version}
+      </additionalProperties>
+    </configuration>
+  </execution>
+</executions>
+<dependencies>
+  <dependency>
+    <groupId>com.totalenergies.codegen</groupId>
+    <artifactId>tdf-typescript-angular</artifactId>
+    <version>0.0.3</version>
+  </dependency>
+</dependencies>
+</plugin>
+----
+
+=== Adding a generator
+We can leverage existing code through inheritance
+
+[source,java]
+----
+public class TDFTypeScriptAngularClientCodegen
+extends TypeScriptAngularClientCodegen {
+}
+----
+
+=== Adding a generator
+And override the faulty code part
+
+[source,java,highlight=6..8]
+----
+private void addNpmPackageGeneration(SemVer ngVersion) {
+    if (additionalProperties.containsKey(NPM_REPOSITORY)) {
+      this.setNpmRepository(additionalProperties.get(NPM_REPOSITORY).toString());
+    }
+
+    /* Set the typescript version compatible to the Angular version */
+    if (ngVersion.atLeast("12.0.0")) {
+      additionalProperties.put("tsVersion", ">=4.2.0");
+    } else if (ngVersion.atLeast("11.0.0")) {
+      additionalProperties.put("tsVersion", ">=4.0.0 <4.1.0");
+    } else {
+      additionalProperties.put("tsVersion", ">=3.9.2 <4.0.0");
+    }
+}
+----

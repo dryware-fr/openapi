@@ -15,7 +15,7 @@
   "dependencies": {
     "@asciidoctor/reveal.js": "^4.1.0",
     "asciidoctor": "^2.2.4",
-    "highlight.js": "^11.0.1",
+    "highlight.js": "^10.7.3",
     "http-server": "^0.12.3",
     "nodemon": "^2.0.9",
     "reveal.js": "^3.9.2"

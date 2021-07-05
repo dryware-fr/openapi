@@ -4,7 +4,7 @@
 
 Maven output when building the client-api module :
 
-[source]
+[source,highlight=10..13]
 ----
 [INFO] --- exec-maven-plugin:1.3.2:exec (npm install dependencies) @ client-api ---
 npm ERR! code ERESOLVE
@@ -27,9 +27,15 @@ npm ERR! to accept an incorrect (and potentially broken) dependency resolution.
 
 === How does it look ?
 
-In the generated module's package.json :
+Angular compiler needs typescript version to be >= 4.2.
 
-[source,json]
+The generated package.json forbids it through a constraint on typescript version.
+
+=== How does it look ?
+
+Generated module's package.json :
+
+[source,json,highlight=12]
 ----
 {
   "devDependencies": {
@@ -47,9 +53,3 @@ In the generated module's package.json :
   }
 }
 ----
-
-=== How does it look ?
-
-Angular compiler needs typescript version to be >= 4.2.
-
-The generated package.json forbids it through a constraint `"typescript": ">=4.0.0 <4.1.0"`.

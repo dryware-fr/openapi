@@ -1,0 +1,10 @@
+== Inner sourcing
+
+Digital-WSOR-Feed
+
+tdf-ts-ng-openapi-generator
+
+[.notes]
+--
+https://dev.azure.com/INOX-Code/Digital-WSOR/_git/tdf-ts-ng-openapi-generator
+--
