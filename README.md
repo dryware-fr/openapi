@@ -21,6 +21,5 @@ some files from `node_modules`, like stylesheets, library javascript, etc.
 * [OpenAPI generators list](https://openapi-generator.tech/docs/generators/)
 * [Integration HOWTO](https://tdf.atlassian.net/wiki/spaces/TDF/pages/1451524628/Digital+Well+SOR+OpenApi)
 * [Generators customization](https://openapi-generator.tech/docs/customization)
-* [tdf-ts-ng-openapi-generator](https://dev.azure.com/INOX-Code/Digital-WSOR/_git/tdf-ts-ng-openapi-generator)
 * [OpenAPI Tools](https://openapi.tools/)
 * [Apibldr GUI](https://www.apibldr.com/)

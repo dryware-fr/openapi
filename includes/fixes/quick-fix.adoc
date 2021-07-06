@@ -1,7 +1,5 @@
 == Quick fix
 
-=== Quick fix
-
 Manually fix the dependencies tree after code generation by adding intermediate build steps :
 
 * remove blocking packages

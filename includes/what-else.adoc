@@ -1,7 +1,5 @@
 == What else can we do ?
 
-=== What else can we do ?
-
 Read the documentation on customization
 
 Two ways to customize a generator :

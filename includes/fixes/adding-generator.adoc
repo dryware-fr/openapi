@@ -1,5 +1,4 @@
 == Adding a generator
-=== Adding a generator
 By making a pull request
 
 * Needs dev team validation

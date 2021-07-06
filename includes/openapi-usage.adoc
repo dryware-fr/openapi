@@ -1,7 +1,5 @@
 == OpenAPI usage
 
-=== OpenAPI usage
-
 * Write one OpenAPI specification
 * OpenAPI generator produces modules for eased API integration
 * Many supported languages & frameworks (frontend/backend)
@@ -9,6 +7,12 @@
 
 [.notes]
 --
+Swagger Editor
+https://editor.swagger.io/
+
+API Bldr
+https://apibldr.com/
+
 OpenAPI generators list
 https://openapi-generator.tech/docs/generators/
 --

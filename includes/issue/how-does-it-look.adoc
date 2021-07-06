@@ -1,7 +1,5 @@
 == How does it look ?
 
-=== How does it look ?
-
 Maven output when building the client-api module :
 
 [source,highlight=10..13]

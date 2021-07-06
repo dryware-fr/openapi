@@ -1,7 +1,5 @@
 == Project activity
 
-=== Project activity
-
 More than 80 opened issues when searching for typescript angular
 
 === Project activity
