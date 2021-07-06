@@ -1,6 +1,6 @@
 == OpenAPI usage
 
-* Write one OpenAPI specification
+* Write one rest API specification
 * OpenAPI generator produces modules for eased API integration
 * Many supported languages & frameworks (frontend/backend)
 * Ready to be sent to TDF's APIM team
