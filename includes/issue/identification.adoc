@@ -52,7 +52,7 @@ https://github.com/OpenAPITools/openapi-generator/blob/v5.1.1/modules/openapi-ge
 
 The `tsVersion` attribute is given by the generator class `TypeScriptAngularClientCodegen` :
 
-[source,java,highlight=8..10]
+[source,java,highlight=7..9]
 ----
 private void addNpmPackageGeneration(SemVer ngVersion) {
 
